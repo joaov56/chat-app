@@ -29,7 +29,7 @@ export function Chat({ currentUser, onLogout }: any) {
 
     socket.on("chat", (newMessage) => {
       console.log("New message added", newMessage);
-      setMessages((previousMessages) => [...previousMessages, newMessage]);
+      setMessages(newMessage);
     });
 
     return () => {
